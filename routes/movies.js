@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/movies', (req, res) => {
-    fetch(`https://api.themoviedb.org/3/search/movie?query=Harry+Potter&api_key=${process.env.API_KEY}`)
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}`)
     .then(response => response.json())
     .then(movies => {
         const moviesData = [];
